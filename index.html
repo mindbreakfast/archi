@@ -97,6 +97,9 @@
         
         .filter-section {
             margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         
         #casino-filter {
@@ -120,17 +123,40 @@
             color: #8a8a8a;
         }
         
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            padding: 10px 20px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid #2d2d4d;
+            color: #c0c0c0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: #fff;
+            border-color: #2563eb;
+        }
+        
         .casino-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
             margin-bottom: 50px;
         }
         
         .casino-item {
             background: rgba(15, 23, 42, 0.8);
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
             border: 1px solid #2d2d4d;
@@ -144,12 +170,80 @@
             border-color: #ffcc00;
         }
         
-        .casino-name {
+        .casino-banner {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
             font-size: 1.2rem;
+        }
+        
+        .casino-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .casino-name {
+            font-size: 1.3rem;
             color: #ffcc00;
             margin-bottom: 15px;
             text-align: center;
             font-weight: 600;
+        }
+        
+        .casino-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .info-item i {
+            color: #ffcc00;
+        }
+        
+        .casino-promo {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px dashed #ffcc00;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .casino-promo:hover {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+        }
+        
+        .promo-label {
+            font-size: 0.8rem;
+            color: #c0c0c0;
+            margin-bottom: 5px;
+        }
+        
+        .promo-code-item {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            letter-spacing: 1px;
         }
         
         .casino-link {
@@ -235,6 +329,12 @@
                 font-size: 1.1rem;
                 padding: 8px 16px;
             }
+            
+            .category-filters {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -243,12 +343,12 @@
         <header>
             <h1>Арчи может!</h1>
             <div class="social-links">
-                <a href="#" title="Telegram канал"><i class="fab fa-telegram"></i></a>
-                <a href="#" title="Telegram чат"><i class="fab fa-telegram"></i></a>
-                <a href="#" title="Kick"><i class="fab fa-kickstarter-k"></i></a>
-                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://t.me/ArchiZnaL" title="Telegram канал" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://t.me/Archi_Znal" title="Telegram чат" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="#" title="Kick" target="_blank"><i class="fab fa-kickstarter-k"></i></a>
+                <a href="#" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
         </header>
         
@@ -259,14 +359,22 @@
                 ❗️❗️ТОП 2024-2025 ГОДА❗️❗️
             </p>
             <p class="promo-text">
-                ПРОМОКОД<br> 
-                <span class="promo-code" id="promo-code">ARCHY100</span>
-                <br>ПРИ РЕГИСТРАЦИИ
+                ПРОМОКОД <span class="promo-code" id="promo-code">❤️ARCHY100❤️</span> ПРИ РЕГИСТРАЦИИ
             </p>
         </section>
         
         <div class="filter-section">
             <input type="text" id="casino-filter" placeholder="Поиск казино по названию...">
+            
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">Все</button>
+                <button class="category-btn" data-category="royals">Роялы</button>
+                <button class="category-btn" data-category="cats">Коты</button>
+                <button class="category-btn" data-category="cryptobosses">Криптобоссы</button>
+                <button class="category-btn" data-category="joys">Джои</button>
+                <button class="category-btn" data-category="bands">Банды</button>
+                <button class="category-btn" data-category="fortunes">Плей Фортуны</button>
+            </div>
         </div>
         
         <div class="casino-list" id="casino-list">
@@ -276,12 +384,12 @@
     
     <footer>
         <div class="footer-social-links">
-            <a href="#" title="Telegram канал"><i class="fab fa-telegram"></i></a>
-            <a href="#" title="Telegram чат"><i class="fab fa-telegram"></i></a>
-            <a href="#" title="Kick"><i class="fab fa-kickstarter-k"></i></a>
-            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/ArchiZnaL" title="Telegram канал" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://t.me/Archi_Znal" title="Telegram чат" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="#" title="Kick" target="_blank"><i class="fab fa-kickstarter-k"></i></a>
+            <a href="#" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
     
@@ -290,50 +398,270 @@
     <script>
         // Данные казино
         const casinos = [
-            { name: "VODKA", links: ["https://uwu.vodka?id=4032"] },
-            { name: "СУКАА", links: ["https://goo.su/Eq3Q32f"] },
-            { name: "Riobet", links: ["https://tracker.rreflink.com/link?btag=7513340_427264"] },
-            { name: "VAVADA", links: ["https://partnervavadarv.com/?promo=5c310709-6a4c-4aab-830f-d9dd0633deb4&target=register"] },
-            { name: "КУШ", links: ["https://play-kush-one.com/dde6dcbd6"] },
-            { name: "Booi", links: ["https://booi-promo2.com/alt/booi/ru/sign-up?83b090c5201e61417376570c9dacfb24"] },
-            { name: "PlaYFortuna", links: ["https://fortuna-promo.net/alt/playfortuna/registration?324af583ac52845bab97f6e6c9f3689c"] },
-            { name: "JOZZ", links: ["https://jozzpromo.info/alt/jozz/registration?0cf85df68ef6a9d4933020b0f80fdb09"] },
-            { name: "Stake ТОЛЬКО КРИПТА", links: ["https://stake1002.com/?c=H8RxysB8"] },
-            { name: "GET X", links: ["https://levelx.top/tfb6f3cd2"] },
-            { name: "1xSlots", links: ["https://refpa13453.top/L?tag=s_758113m_8741c_&site=758113&ad=8741"] },
-            { name: "Cactus", links: ["https://cactus-balances.com/affiliate/c_yt5ue3fx?promoCode=archy100&/path/wallet"] },
-            { name: "NewRetroCasino", links: ["https://linkgotoweb.com/?ref=1379"] },
-            { name: "Bollywood", links: ["https://digitalsmooth.top?ref=fap_w41325p129_bollywood"] },
-            { name: "Everum", links: ["https://bit.ly/3b79fwN"] },
-            { name: "FairSpin", links: ["https://bonafides.club/63172/1?l=5"] },
-            { name: "UNLIM", links: ["https://unlimc.net/dcd8e66b1"] },
-            { name: "cryptoboss", links: ["https://cryptobossc.online/d8b310428"] },
-            { name: "AUF КАЗИНО", links: ["https://auflink.com/d33330915"] },
-            { name: "LEEBET", links: ["https://play-leebet-one.com/d9ab56d9c"] },
-            { name: "БАНДА", links: ["https://play-banda-two.com/d6b26ec91"] },
-            { name: "1GO", links: ["https://1go-irrs01.com/c93369444"] },
-            { name: "КЕНТ", links: ["https://passage-through-deserts.com/d5d5d7aee"] },
-            { name: "GAMA", links: ["https://asengleink.com/dd49c4d1f"] },
-            { name: "CHAMPION SLOTS", links: ["https://temon-gter.cfd/go/o70?p73525p299584p7229"] },
-            { name: "RAMENBET", links: ["https://sul.su/z4zV"] },
-            { name: "JOYCASINO", links: ["https://win9.finditway.com/ru/registration?apkpop=0&partner=p34031p3300040p0692"] },
-            { name: "Casino X", links: ["https://goo.su/BGGUPr5"] },
-            { name: "FLAGMAN", links: ["https://flagman-way-six.com/cc603bd88"] },
-            { name: "CatCasino", links: ["https://catchthecatsix.com/d348785e3"] },
-            { name: "R7CASINO", links: ["https://aristocratic-hall.com/dc49b623a"] },
-            { name: "КОМЕТА", links: ["https://stars-flight.com/s2b9c59b0"] },
-            { name: "LEX", links: ["https://lex-irrs01.com/cbc750540"] },
-            { name: "GIZBO", links: ["https://gzb-blrs10.com/c72564a7b"] },
-            { name: "MONRO", links: ["https://mnr-irrs01.com/c3ef3d3bd"] },
-            { name: "DRIP", links: ["https://drp-irrs01.com/cca21844b"] },
-            { name: "STARDA", links: ["https://strd-irrs12.com/c73b4da28"] },
-            { name: "IZZI", links: ["https://izzi-irrs01.com/c636b38fb"] },
-            { name: "LEGZO", links: ["https://gzo-irrs01.com/c8d4abf8a"] },
-            { name: "SOL", links: ["https://sol-diamew02.com/c984420f9"] },
-            { name: "FRESH", links: ["https://fresh-azhqmrpiks.com/caba447c3"] },
-            { name: "JET", links: ["https://jtfr-itsokarsn.com/c1c438e06"] },
-            { name: "VOLNA", links: ["https://vln-irrs01.com/c4afa0d8c"] },
-            { name: "ROX", links: ["https://rox-fwuocypyjf.com/ca3b282fe"] }
+            { 
+                name: "VODKA", 
+                links: ["https://uwu.vodka?id=4032"],
+                category: "all",
+                searchWords: ["vodka", "водка", "ewrlф", "вщдлф"]
+            },
+            { 
+                name: "СУКАА", 
+                links: ["https://goo.su/Eq3Q32f"],
+                category: "all",
+                searchWords: ["сукаа", "sukaa", "cecrff", "ыефтт"]
+            },
+            { 
+                name: "Riobet", 
+                links: ["https://tracker.rreflink.com/link?btag=7513340_427264"],
+                category: "all",
+                searchWords: ["riobet", "риобет", "hj,jtn", "шщыует"]
+            },
+            { 
+                name: "VAVADA", 
+                links: ["https://partnervavadarv.com/?promo=5c310709-6a4c-4aab-830f-d9dd0633deb4&target=register"],
+                category: "all",
+                searchWords: ["vavada", "вавада", "fafaf", "цацада"]
+            },
+            { 
+                name: "КУШ", 
+                links: ["https://play-kush-one.com/dde6dcbd6"],
+                category: "all",
+                searchWords: ["куш", "kush", "reir", "геш"]
+            },
+            { 
+                name: "Booi", 
+                links: ["https://booi-promo2.com/alt/booi/ru/sign-up?83b090c5201e61417376570c9dacfb24"],
+                category: "all",
+                searchWords: ["booi", "боои", ",jji", "ищщш"]
+            },
+            { 
+                name: "PlaYFortuna", 
+                links: ["https://fortuna-promo.net/alt/playfortuna/registration?324af583ac52845bab97f6e6c9f3689c"],
+                category: "all",
+                searchWords: ["playfortuna", "плейфортуна", "gkzajheynf", "здтуащкегуф"]
+            },
+            { 
+                name: "JOZZ", 
+                links: ["https://jozzpromo.info/alt/jozz/registration?0cf85df68ef6a9d4933020b0f80fdb09"],
+                category: "all",
+                searchWords: ["jozz", "джозз", "ljee", "вщясс"]
+            },
+            { 
+                name: "Stake ТОЛЬКО КРИПТА", 
+                links: ["https://stake1002.com/?c=H8RxysB8"],
+                category: "all",
+                searchWords: ["stake", "стейк", "cnfr", "уыеук"]
+            },
+            { 
+                name: "GET X", 
+                links: ["https://levelx.top/tfb6f3cd2"],
+                category: "all",
+                searchWords: ["getx", "гетх", "utn[", "пузч"]
+            },
+            { 
+                name: "1xSlots", 
+                links: ["https://refpa13453.top/L?tag=s_758113m_8741c_&site=758113&ad=8741"],
+                category: "all",
+                searchWords: ["1xslots", "1хслотс", "1[ckjn", "1чслщте"]
+            },
+            { 
+                name: "Cactus", 
+                links: ["https://cactus-balances.com/affiliate/c_yt5ue3fx?promoCode=archy100&/path/wallet"],
+                category: "all",
+                searchWords: ["cactus", "кактус", "frcne", "рфрге"]
+            },
+            { 
+                name: "NewRetroCasino", 
+                links: ["https://linkgotoweb.com/?ref=1379"],
+                category: "all",
+                searchWords: ["newretro", "ньюретро", "ythnthj", "тметенщ"]
+            },
+            { 
+                name: "Bollywood", 
+                links: ["https://digitalsmooth.top?ref=fap_w41325p129_bollywood"],
+                category: "all",
+                searchWords: ["bollywood", "болливуд", ",jkbddel", 'ищдшруд']
+            },
+            { 
+                name: "Everum", 
+                links: ["https://bit.ly/3b79fwN"],
+                category: "all",
+                searchWords: ["everum", "эверум", "tdthv", 'умуке']
+            },
+            { 
+                name: "FairSpin", 
+                links: ["https://bonafides.club/63172/1?l=5"],
+                category: "all",
+                searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш']
+            },
+            { 
+                name: "UNLIM", 
+                links: ["https://unlimc.net/dcd8e66b1"],
+                category: "all",
+                searchWords: ["unlim", "анлим", "eykbv", 'фтшшу']
+            },
+            { 
+                name: "cryptoboss", 
+                links: ["https://cryptobossc.online/d8b310428"],
+                category: "all",
+                searchWords: ["cryptoboss", "криптобосс", "chgbn,jjcc", 'ксшзщдыосс']
+            },
+            { 
+                name: "AUF КАЗИНО", 
+                links: ["https://auflink.com/d33330915"],
+                category: "all",
+                searchWords: ["auf", "ауф", "fde", 'фав']
+            },
+            { 
+                name: "LEEBET", 
+                links: ["https://play-leebet-one.com/d9ab56d9c"],
+                category: "all",
+                searchWords: ["leebet", "леебет", "kttn", 'дутун']
+            },
+            { 
+                name: "БАНДА", 
+                links: ["https://play-banda-two.com/d6b26ec91"],
+                category: "all",
+                searchWords: ["banda", "банда", "fylf", 'ирфк']
+            },
+            { 
+                name: "1GO", 
+                links: ["https://1go-irrs01.com/c93369444"],
+                category: "all",
+                searchWords: ["1go", "1го", "1uj", '1пщ']
+            },
+            { 
+                name: "КЕНТ", 
+                links: ["https://passage-through-deserts.com/d5d5d7aee"],
+                category: "all",
+                searchWords: ["kent", "кент", "rty", 'нуе']
+            },
+            { 
+                name: "GAMA", 
+                links: ["https://asengleink.com/dd49c4d1f"],
+                category: "all",
+                searchWords: ["gama", "гама", "ufvf", 'пфпя']
+            },
+            { 
+                name: "CHAMPION SLOTS", 
+                links: ["https://temon-gter.cfd/go/o70?p73525p299584p7229"],
+                category: "all",
+                searchWords: ["champion", "чемпион", "xvfrvby", 'чезлщт']
+            },
+            { 
+                name: "RAMENBET", 
+                links: ["https://sul.su/z4zV"],
+                category: "all",
+                searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин']
+            },
+            { 
+                name: "JOYCASINO", 
+                links: ["https://win9.finditway.com/ru/registration?apkpop=0&partner=p34031p3300040p0692"],
+                category: "all",
+                searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз']
+            },
+            { 
+                name: "Casino X", 
+                links: ["https://goo.su/BGGUPr5"],
+                category: "all",
+                searchWords: ["casinox", "казинокс", "fpb[yjc", 'рфшытще']
+            },
+            { 
+                name: "FLAGMAN", 
+                links: ["https://flagman-way-six.com/cc603bd88"],
+                category: "all",
+                searchWords: ["flagman", "флагман", "akfufvy", 'адфтпя']
+            },
+            { 
+                name: "CatCasino", 
+                links: ["https://catchthecatsix.com/d348785e3"],
+                category: "all",
+                searchWords: ["catcasino", "катказано", "fcnfpfyf", 'рфеасящ']
+            },
+            { 
+                name: "R7CASINO", 
+                links: ["https://aristocratic-hall.com/dc49b623a"],
+                category: "all",
+                searchWords: ["r7casino", "р7казино", "h7fpfbyj", 'к7рфшзыщ']
+            },
+            { 
+                name: "КОМЕТА", 
+                links: ["https://stars-flight.com/s2b9c59b0"],
+                category: "all",
+                searchWords: ["cometa", "комета", "rjvtnf", 'щшсукф']
+            },
+            { 
+                name: "LEX", 
+                links: ["https://lex-irrs01.com/cbc750540"],
+                category: "all",
+                searchWords: ["lex", "лекс", "kt", 'лчу']
+            },
+            { 
+                name: "GIZBO", 
+                links: ["https://gzb-blrs10.com/c72564a7b"],
+                category: "all",
+                searchWords: ["gizbo", "гизбо", "ubp,j", 'пшсяд']
+            },
+            { 
+                name: "MONRO", 
+                links: ["https://mnr-irrs01.com/c3ef3d3bd"],
+                category: "all",
+                searchWords: ["monro", "монро", "vjyhj", 'щтпкщ']
+            },
+            { 
+                name: "DRIP", 
+                links: ["https://drp-irrs01.com/cca21844b"],
+                category: "all",
+                searchWords: ["drip", "дрип", "lhib", 'вшшз']
+            },
+            { 
+                name: "STARDA", 
+                links: ["https://strd-irrs12.com/c73b4da28"],
+                category: "all",
+                searchWords: ["starda", "старда", "cnfhlf", 'уфкеак']
+            },
+            { 
+                name: "IZZI", 
+                links: ["https://izzi-irrs01.com/c636b38fb"],
+                category: "all",
+                searchWords: ["izzi", "иззи", "bppb", 'шсяш']
+            },
+            { 
+                name: "LEGZO", 
+                links: ["https://gzo-irrs01.com/c8d4abf8a"],
+                category: "all",
+                searchWords: ["legzo", "легзо", "ktupj", 'дупся']
+            },
+            { 
+                name: "SOL", 
+                links: ["https://sol-diamew02.com/c984420f9"],
+                category: "all",
+                searchWords: ["sol", "сол", "cjk", 'ыщд']
+            },
+            { 
+                name: "FRESH", 
+                links: ["https://fresh-azhqmrpiks.com/caba447c3"],
+                category: "all",
+                searchWords: ["fresh", "фреш", "aht", 'фку']
+            },
+            { 
+                name: "JET", 
+                links: ["https://jtfr-itsokarsn.com/c1c438e06"],
+                category: "all",
+                searchWords: ["jet", "джет", "rtn", 'куе']
+            },
+            { 
+                name: "VOLNA", 
+                links: ["https://vln-irrs01.com/c4afa0d8c"],
+                category: "all",
+                searchWords: ["volna", "волна", "djkyf", 'вщдрф']
+            },
+            { 
+                name: "ROX", 
+                links: ["https://rox-fwuocypyjf.com/ca3b282fe"],
+                category: "all",
+                searchWords: ["rox", "рокс", "hjc", 'кще']
+            }
         ];
 
         // Функция для отображения казино
@@ -345,23 +673,74 @@
                 const casinoItem = document.createElement('div');
                 casinoItem.className = 'casino-item';
                 
+                // Баннер казино
+                const casinoBanner = document.createElement('div');
+                casinoBanner.className = 'casino-banner';
+                casinoBanner.innerHTML = `<div>${casino.name}</div>`;
+                
+                // Контент казино
+                const casinoContent = document.createElement('div');
+                casinoContent.className = 'casino-content';
+                
+                // Название казино
                 const casinoName = document.createElement('div');
                 casinoName.className = 'casino-name';
                 casinoName.textContent = casino.name;
                 
+                // Информация о казино
+                const casinoInfo = document.createElement('div');
+                casinoInfo.className = 'casino-info';
+                
+                const infoItems = [
+                    {icon: 'fas fa-coins', text: '+150% к депозиту и 200 спинов'},
+                    {icon: 'fas fa-percentage', text: '3% кешбек'},
+                    {icon: 'fas fa-bolt', text: 'Мгновенные выводы'}
+                ];
+                
+                infoItems.forEach(item => {
+                    const infoItem = document.createElement('div');
+                    infoItem.className = 'info-item';
+                    infoItem.innerHTML = `<i class="${item.icon}"></i> <span>${item.text}</span>`;
+                    casinoInfo.appendChild(infoItem);
+                });
+                
+                // Промокод
+                const casinoPromo = document.createElement('div');
+                casinoPromo.className = 'casino-promo';
+                casinoPromo.addEventListener('click', () => copyPromoCode());
+                
+                const promoLabel = document.createElement('div');
+                promoLabel.className = 'promo-label';
+                promoLabel.textContent = 'Промокод';
+                
+                const promoCodeItem = document.createElement('div');
+                promoCodeItem.className = 'promo-code-item';
+                promoCodeItem.textContent = 'ARCHY100';
+                
+                casinoPromo.appendChild(promoLabel);
+                casinoPromo.appendChild(promoCodeItem);
+                
+                // Кнопка перехода
                 const casinoLink = document.createElement('a');
                 casinoLink.href = casino.links[0];
                 casinoLink.className = 'casino-link';
                 casinoLink.target = '_blank';
-                casinoLink.textContent = casino.name;
+                casinoLink.textContent = 'Перейти на сайт';
                 
                 // Добавляем обработчик для копирования промокода
                 casinoLink.addEventListener('click', function(e) {
                     copyPromoCode();
                 });
                 
-                casinoItem.appendChild(casinoName);
-                casinoItem.appendChild(casinoLink);
+                // Собираем все вместе
+                casinoContent.appendChild(casinoName);
+                casinoContent.appendChild(casinoInfo);
+                casinoContent.appendChild(casinoPromo);
+                casinoContent.appendChild(casinoLink);
+                
+                casinoItem.appendChild(casinoBanner);
+                casinoItem.appendChild(casinoContent);
+                
                 casinoList.appendChild(casinoItem);
             });
         }
@@ -382,9 +761,22 @@
         // Функция для фильтрации казино
         function filterCasinos() {
             const filterValue = document.getElementById('casino-filter').value.toLowerCase();
-            const filteredCasinos = casinos.filter(casino => 
-                casino.name.toLowerCase().includes(filterValue)
-            );
+            const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+            
+            let filteredCasinos = casinos;
+            
+            // Фильтрация по категории
+            if (activeCategory !== 'all') {
+                filteredCasinos = filteredCasinos.filter(casino => casino.category === activeCategory);
+            }
+            
+            // Фильтрация по поисковому запросу
+            if (filterValue) {
+                filteredCasinos = filteredCasinos.filter(casino => 
+                    casino.searchWords.some(word => word.toLowerCase().includes(filterValue)) ||
+                    casino.name.toLowerCase().includes(filterValue)
+                );
+            }
             
             renderCasinos(filteredCasinos);
         }
@@ -399,6 +791,15 @@
             
             // Обработчик для копирования промокода
             document.getElementById('promo-code').addEventListener('click', copyPromoCode);
+            
+            // Обработчики для кнопок категорий
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterCasinos();
+                });
+            });
         });
     </script>
 </body>
