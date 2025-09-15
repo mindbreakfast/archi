@@ -11,13 +11,15 @@ const casinos = [
         name: "СУКАА", 
         links: ["https://goo.su/Eq3Q32f"],
         category: "all",
-        searchWords: ["сукаа", "sukaa", "cecrff", "ыефтт"]
+        searchWords: ["сукаа", "sukaa", "cecrff", "ыефтт"],
+                image: "img/syka.jpg"
     },
     { 
         name: "Riobet", 
         links: ["https://tracker.rreflink.com/link?btag=7513340_427264"],
         category: "all",
-        searchWords: ["riobet", "риобет", "hj,jtn", "шщыует"]
+        searchWords: ["riobet", "риобет", "hj,jtn", "шщыует"],
+                image: "img/riobet.jpg"
     },
     { 
         name: "VAVADA", 
