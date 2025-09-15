@@ -32,7 +32,8 @@ const casinos = [
         name: "КУШ", 
         links: ["https://play-kush-one.com/dde6dcbd6"],
         category: "bands",
-        searchWords: ["куш", "kush", "reir", "геш"]
+        searchWords: ["куш", "kush", "reir", "геш"],
+        image: "img/kush.jpg"
     },
     { 
         name: "Booi", 
