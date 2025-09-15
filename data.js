@@ -1,39 +1,52 @@
 // Данные казино с категориями и изображениями
 const casinos = [
+    // ТОП казино (идут первыми)
+    { 
+        name: "VAVADA", 
+        links: ["https://partnervavadarv.com/?promo=5c310709-6a4c-4aab-830f-d9dd0633deb4&target=register"],
+        category: "top",
+        searchWords: ["vavada", "вавада", "fafaf", "цацада"],
+        image: "img/vavada.jpg",
+        isTop: true
+    },
     { 
         name: "VODKA", 
         links: ["https://uwu.vodka?id=4032"],
-        category: "all",
+        category: "top",
         searchWords: ["vodka", "водка", "ewrlф", "вщдлф"],
-        image: "img/vodka.jpg"
-    },
-    { 
-        name: "СУКАА", 
-        links: ["https://goo.su/Eq3Q32f"],
-        category: "all",
-        searchWords: ["сукаа", "sukaa", "cecrff", "ыефтт"],
-                image: "img/syka.jpg"
+        image: "img/vodka.jpg",
+        isTop: true
     },
     { 
         name: "Riobet", 
         links: ["https://tracker.rreflink.com/link?btag=7513340_427264"],
-        category: "all",
+        category: "top",
         searchWords: ["riobet", "риобет", "hj,jtn", "шщыует"],
-                image: "img/riobet.jpg"
+        image: "img/riobet.jpg",
+        isTop: true
     },
     { 
-        name: "VAVADA", 
-        links: ["https://partnervavadarv.com/?promo=5c310709-6a4c-4aab-830f-d9dd0633deb4&target=register"],
-        category: "all",
-        searchWords: ["vavada", "вавада", "fafaf", "цацада"],
-        image: "img/vavada.jpg"
+        name: "СУКАА", 
+        links: ["https://goo.su/Eq3Q32f"],
+        category: "top",
+        searchWords: ["сукаа", "sukaa", "cecrff", "ыефтт"],
+        image: "img/syka.jpg",
+        isTop: true
     },
+    { 
+        name: "Winity", 
+        links: ["https://winity-casino.example.com"], // Замените на реальную ссылку
+        category: "top",
+        searchWords: ["winity", "винити", "dbybnb", "шышы"],
+        isTop: true
+    },
+    
+    // Остальные казино
     { 
         name: "КУШ", 
         links: ["https://play-kush-one.com/dde6dcbd6"],
         category: "bands",
-        searchWords: ["куш", "kush", "reir", "геш"],
-        image: "img/kush.jpg"
+        searchWords: ["куш", "kush", "reir", "геш"]
     },
     { 
         name: "Booi", 
@@ -53,8 +66,7 @@ const casinos = [
         name: "JOZZ", 
         links: ["https://jozzpromo.info/alt/jozz/registration?0cf85df68ef6a9d4933020b0f80fdb09"],
         category: "all",
-        searchWords: ["jozz", "джозз", "ljee", "вщясс"],
-                        image: "img/jozz.jpg"
+        searchWords: ["jozz", "джозз", "ljee", "вщясс"]
     },
     { 
         name: "Stake ТОЛЬКО КРИПТА", 
@@ -103,8 +115,7 @@ const casinos = [
         name: "FairSpin", 
         links: ["https://bonafides.club/63172/1?l=5"],
         category: "all",
-        searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш'],
-                image: "img/fairspin.jpg"
+        searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш']
     },
     { 
         name: "UNLIM", 
@@ -134,7 +145,7 @@ const casinos = [
         searchWords: ["leebet", "леебет", "kttn", 'дутун']
     },
     { 
-        name: "БАНДА", 
+        name: "БАНDA", 
         links: ["https://play-banda-two.com/d6b26ec91"],
         category: "bands",
         searchWords: ["banda", "банда", "fylf", 'ирфк']
@@ -167,15 +178,13 @@ const casinos = [
         name: "RAMENBET", 
         links: ["https://sul.su/z4zV"],
         category: "joys",
-        searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин'],
-                image: "img/ramenbet.jpg"
+        searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин']
     },
     { 
         name: "JOYCASINO", 
         links: ["https://win9.finditway.com/ru/registration?apkpop=0&partner=p34031p3300040p0692"],
         category: "joys",
-        searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз'],
-                        image: "img/joy.jpg"
+        searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз']
     },
     { 
         name: "Casino X", 
