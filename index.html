@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Арчи знал!</title>
+    <title>Арчи знает!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="parallax-bg"></div>
     <div class="container">
         <header>
-            <h1>Арчи знал!</h1>
+            <h1>Арчи знает!</h1>
             <div class="social-links">
                 <a href="https://t.me/ArchiZnaL" title="Telegram канал" target="_blank"><i class="fab fa-telegram"></i></a>
                 <a href="https://t.me/Archi_Znal" title="Telegram чат" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -27,20 +28,26 @@
             </button>
         </div>
         
-<div class="filter-section">
-    <input type="text" id="casino-filter" placeholder="Поиск казино по названию...">
-    
-    <div class="category-filters">
-        <button class="category-btn active" data-category="all">Все</button>
-        <button class="category-btn" data-category="top">ТОП</button>
-        <button class="category-btn" data-category="royals">Роялы</button>
-        <button class="category-btn" data-category="cats">Коты</button>
-        <button class="category-btn" data-category="cryptobosses">Криптобоссы</button>
-        <button class="category-btn" data-category="joys">Джои</button>
-        <button class="category-btn" data-category="bands">Банды</button>
-        <button class="category-btn" data-category="fortunes">Плей Фортуны</button>
-    </div>
-</div>
+        <div class="filter-section">
+            <input type="text" id="casino-filter" placeholder="Поиск казино по названию...">
+            
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">Все</button>
+                <button class="category-btn" data-category="top">ТОП</button>
+                <button class="category-btn" data-category="royals">Роялы</button>
+                <button class="category-btn" data-category="cats">Коты</button>
+                <button class="category-btn" data-category="cryptobosses">Криптобоссы</button>
+                <button class="category-btn" data-category="joys">Джои</button>
+                <button class="category-btn" data-category="bands">Банды</button>
+                <button class="category-btn" data-category="fortunes">Плей Фортуны</button>
+            </div>
+
+            <div class="view-controls">
+                <button id="view-toggle" class="view-toggle-btn" title="Переключить вид">
+                    <i class="fas fa-th-large"></i>
+                </button>
+            </div>
+        </div>
         
         <div class="casino-list" id="casino-list">
             <!-- Казино будут добавлены через JavaScript -->
@@ -59,6 +66,11 @@
     </footer>
     
     <div class="copy-notification" id="copy-notification">Промокод скопирован!</div>
+    
+    <!-- Кнопка "Вверх" -->
+    <button id="scroll-to-top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     
     <!-- Модальное окно инструкции -->
     <div id="instruction-modal" class="modal">
@@ -86,7 +98,7 @@
                 <h4>Возможные проблемы:</h4>
                 <ul>
                     <li>депозит может где-то зависнуть и придётся ждать до 2х недель, такое случалось у некоторых игроков;</li>
-                    <li>при крупных выводах на карту или большом количестве депозитов с карты - платежи идут за пределы РФ, банк не видит, что это в казино и может запросить полную информацию, откуда деньги, куда отправляются, всякие                     справки НДФЛ и т.п. Если такой запрос от банка пришёл, то с вероятностью 99% банк заблокирует вас без возможности открывать новые счета и карты.</li>
+                    <li>при крупных выводах на карту или большом количестве депозитов с карты - платежи идут за пределы РФ, банк не видит, что это в казино и может запросить полную информацию, откуда деньги, куда отправляются, всякие справки НДФЛ и т.п. Если такой запрос от банка пришёл, то с вероятностью 99% банк заблокирует вас без возможности открывать новые счета и карты.</li>
                 </ul>
                 
                 <h4>Решение:</h4>
