@@ -7,6 +7,11 @@ function renderCasinos(casinosToRender) {
         const casinoItem = document.createElement('div');
         casinoItem.className = 'casino-item';
         
+        // Добавляем класс для ТОП казино
+        if (casino.isTop) {
+            casinoItem.classList.add('top-casino');
+        }
+        
         // Баннер казино
         const casinoBanner = document.createElement('div');
         casinoBanner.className = 'casino-banner';
@@ -18,6 +23,20 @@ function renderCasinos(casinosToRender) {
             casinoBanner.innerHTML = `<div>${casino.name}</div>`;
         }
         
+        // Добавляем класс для ТОП баннера
+        if (casino.isTop) {
+            casinoBanner.classList.add('top-banner');
+        }
+        
+        // Бейдж ТОП для казино из этой категории
+        if (casino.isTop) {
+            const topBadge = document.createElement('div');
+            topBadge.className = 'top-badge';
+            topBadge.textContent = 'ТОП';
+            casinoBanner.appendChild(topBadge);
+        }
+        
+        // Остальной код остается без изменений...
         // Контент казино
         const casinoContent = document.createElement('div');
         casinoContent.className = 'casino-content';
