@@ -52,7 +52,8 @@ const casinos = [
         name: "JOZZ", 
         links: ["https://jozzpromo.info/alt/jozz/registration?0cf85df68ef6a9d4933020b0f80fdb09"],
         category: "all",
-        searchWords: ["jozz", "джозз", "ljee", "вщясс"]
+        searchWords: ["jozz", "джозз", "ljee", "вщясс"],
+                        image: "img/jozz.jpg"
     },
     { 
         name: "Stake ТОЛЬКО КРИПТА", 
@@ -170,7 +171,8 @@ const casinos = [
         name: "JOYCASINO", 
         links: ["https://win9.finditway.com/ru/registration?apkpop=0&partner=p34031p3300040p0692"],
         category: "joys",
-        searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз']
+        searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз'],
+                        image: "img/joy.jpg"
     },
     { 
         name: "Casino X", 
