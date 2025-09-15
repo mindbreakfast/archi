@@ -103,7 +103,8 @@ const casinos = [
         name: "FairSpin", 
         links: ["https://bonafides.club/63172/1?l=5"],
         category: "all",
-        searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш']
+        searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш'],
+                image: "img/fairspin.jpg"
     },
     { 
         name: "UNLIM", 
@@ -166,7 +167,8 @@ const casinos = [
         name: "RAMENBET", 
         links: ["https://sul.su/z4zV"],
         category: "joys",
-        searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин']
+        searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин'],
+                image: "img/ramenbet.jpg"
     },
     { 
         name: "JOYCASINO", 
