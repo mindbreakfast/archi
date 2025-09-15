@@ -52,7 +52,8 @@ const casinos = [
         name: "Stake ТОЛЬКО КРИПТА", 
         links: ["https://stake1002.com/?c=H8RxysB8"],
         category: "all",
-        searchWords: ["stake", "стейк", "cnfr", "уыеук"]
+        searchWords: ["stake", "стейк", "cnfr", "уыеук"],
+        image: "img/stake-logo.png"
     },
     { 
         name: "GET X", 
@@ -278,7 +279,13 @@ function renderCasinos(casinosToRender) {
         // Баннер казино
         const casinoBanner = document.createElement('div');
         casinoBanner.className = 'casino-banner';
-        casinoBanner.innerHTML = `<div>${casino.name}</div>`;
+        
+        if (casino.image) {
+            casinoBanner.style.backgroundImage = `url(${casino.image})`;
+            casinoBanner.innerHTML = ''; // Убираем текст для Stake
+        } else {
+            casinoBanner.innerHTML = `<div>${casino.name}</div>`;
+        }
         
         // Контент казино
         const casinoContent = document.createElement('div');
