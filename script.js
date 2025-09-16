@@ -1,17 +1,7 @@
-// Переменная для отслеживания текущего режима отображения
-let isCompactView = false;
-
 // Функция для отображения казино
 function renderCasinos(casinosToRender) {
     const casinoList = document.getElementById('casino-list');
     casinoList.innerHTML = '';
-    
-    // Применяем класс компактного вида если нужно
-    if (isCompactView) {
-        casinoList.classList.add('compact-view');
-    } else {
-        casinoList.classList.remove('compact-view');
-    }
     
     casinosToRender.forEach(casino => {
         const casinoItem = document.createElement('div');
@@ -148,23 +138,6 @@ function closeModal() {
     document.getElementById('instruction-modal').style.display = 'none';
 }
 
-// Функция для переключения вида
-function toggleView() {
-    isCompactView = !isCompactView;
-    const toggleBtn = document.getElementById('view-toggle');
-    
-    if (isCompactView) {
-        toggleBtn.innerHTML = '<i class="fas fa-th"></i>';
-        toggleBtn.title = 'Переключить на 3 колонки';
-    } else {
-        toggleBtn.innerHTML = '<i class="fas fa-th-large"></i>';
-        toggleBtn.title = 'Переключить на 4 колонки';
-    }
-    
-    // Перерисовываем казино с новыми настройками
-    filterCasinos();
-}
-
 // Функция для прокрутки вверх
 function scrollToTop() {
     window.scrollTo({
@@ -200,9 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
-    
-    // Обработчик для переключения вида
-    document.getElementById('view-toggle').addEventListener('click', toggleView);
     
     // Обработчик для кнопки "Вверх"
     document.getElementById('scroll-to-top').addEventListener('click', scrollToTop);
