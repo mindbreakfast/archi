@@ -38,6 +38,7 @@ const casinos = [
         links: ["https://winity-casino.example.com"], // Замените на реальную ссылку
         category: "top",
         searchWords: ["winity", "винити", "dbybnb", "шышы"],
+                image: "img/winity.jpg",
         isTop: true
     },
     
@@ -46,7 +47,8 @@ const casinos = [
         name: "КУШ", 
         links: ["https://play-kush-one.com/dde6dcbd6"],
         category: "bands",
-        searchWords: ["куш", "kush", "reir", "геш"]
+        searchWords: ["куш", "kush", "reir", "геш"],
+                image: "img/kush.jpg"
     },
     { 
         name: "Booi", 
@@ -66,7 +68,8 @@ const casinos = [
         name: "JOZZ", 
         links: ["https://jozzpromo.info/alt/jozz/registration?0cf85df68ef6a9d4933020b0f80fdb09"],
         category: "all",
-        searchWords: ["jozz", "джозз", "ljee", "вщясс"]
+        searchWords: ["jozz", "джозз", "ljee", "вщясс"],
+                image: "img/jozz.jpg"
     },
     { 
         name: "Stake ТОЛЬКО КРИПТА", 
@@ -79,43 +82,50 @@ const casinos = [
         name: "GET X", 
         links: ["https://levelx.top/tfb6f3cd2"],
         category: "all",
-        searchWords: ["getx", "гетх", "utn[", "пузч"]
+        searchWords: ["getx", "гетх", "utn[", "пузч"],
+                image: "img/getx.jpg"
     },
     { 
         name: "1xSlots", 
         links: ["https://refpa13453.top/L?tag=s_758113m_8741c_&site=758113&ad=8741"],
         category: "all",
-        searchWords: ["1xslots", "1хслотс", "1[ckjn", "1чслщте"]
+        searchWords: ["1xslots", "1хслотс", "1[ckjn", "1чслщте"],
+                image: "img/1xslots.jpg"
     },
     { 
         name: "Cactus", 
         links: ["https://cactus-balances.com/affiliate/c_yt5ue3fx?promoCode=archy100&/path/wallet"],
         category: "all",
-        searchWords: ["cactus", "кактус", "frcne", "рфрге"]
+        searchWords: ["cactus", "кактус", "frcne", "рфрге"],
+                        image: "img/cactus.jpg"
     },
     { 
         name: "NewRetroCasino", 
         links: ["https://linkgotoweb.com/?ref=1379"],
         category: "all",
-        searchWords: ["newretro", "ньюретро", "ythnthj", "тметенщ"]
+        searchWords: ["newretro", "ньюретро", "ythnthj", "тметенщ"],
+                        image: "img/newretrocasino.jpg"
     },
     { 
         name: "Bollywood", 
         links: ["https://digitalsmooth.top?ref=fap_w41325p129_bollywood"],
         category: "all",
-        searchWords: ["bollywood", "болливуд", ",jkbddel", 'ищдшруд']
+        searchWords: ["bollywood", "болливуд", ",jkbddel", 'ищдшруд'],
+                        image: "img/bollywood.jpg"
     },
     { 
         name: "Everum", 
         links: ["https://bit.ly/3b79fwN"],
         category: "all",
-        searchWords: ["everum", "эверум", "tdthv", 'умуке']
+        searchWords: ["everum", "эверум", "tdthv", 'умуке'],
+                        image: "img/everum.jpg"
     },
     { 
         name: "FairSpin", 
         links: ["https://bonafides.club/63172/1?l=5"],
         category: "all",
-        searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш']
+        searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш'],
+                        image: "img/fairspin.jpg"
     },
     { 
         name: "UNLIM", 
@@ -142,7 +152,8 @@ const casinos = [
         name: "LEEBET", 
         links: ["https://play-leebet-one.com/d9ab56d9c"],
         category: "bands",
-        searchWords: ["leebet", "леебет", "kttn", 'дутун']
+        searchWords: ["leebet", "леебет", "kttn", 'дутун'],
+                        image: "img/leebet.jpg"
     },
     { 
         name: "БАНDA", 
@@ -190,7 +201,8 @@ const casinos = [
         name: "Casino X", 
         links: ["https://goo.su/BGGUPr5"],
         category: "joys",
-        searchWords: ["casinox", "казинокс", "fpb[yjc", 'рфшытще']
+        searchWords: ["casinox", "казинокс", "fpb[yjc", 'рфшытще'],
+                        image: "img/casinox.jpg"
     },
     { 
         name: "FLAGMAN", 
