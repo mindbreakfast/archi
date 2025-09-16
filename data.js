@@ -7,7 +7,12 @@ const casinos = [
         category: "top",
         searchWords: ["vavada", "вавада", "fafaf", "цацада"],
         image: "img/vavada.jpg",
-        isTop: true
+        isTop: true,
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "VODKA", 
@@ -15,7 +20,12 @@ const casinos = [
         category: "top",
         searchWords: ["vodka", "водка", "ewrlф", "вщдлф"],
         image: "img/vodka.jpg",
-        isTop: true
+        isTop: true,
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Riobet", 
@@ -23,7 +33,12 @@ const casinos = [
         category: "top",
         searchWords: ["riobet", "риобет", "hj,jtn", "шщыует"],
         image: "img/riobet.jpg",
-        isTop: true
+        isTop: true,
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "СУКАА", 
@@ -31,7 +46,12 @@ const casinos = [
         category: "top",
         searchWords: ["сукаа", "sukaa", "cecrff", "ыефтт"],
         image: "img/syka.jpg",
-        isTop: true
+        isTop: true,
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Winity", 
@@ -39,7 +59,12 @@ const casinos = [
         category: "top",
         searchWords: ["winity", "винити", "dbybnb", "шышы"],
                 image: "img/winity.jpg",
-        isTop: true
+        isTop: true,
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     
     // Остальные казино
@@ -48,279 +73,479 @@ const casinos = [
         links: ["https://play-kush-one.com/dde6dcbd6"],
         category: "bands",
         searchWords: ["куш", "kush", "reir", "геш"],
-                image: "img/kush.jpg"
+                image: "img/kush.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Booi", 
         links: ["https://booi-promo2.com/alt/booi/ru/sign-up?83b090c5201e61417376570c9dacfb24"],
         category: "fortunes",
         searchWords: ["booi", "боои", ",jji", "ищщш", "буй"],
-        image: "img/booi.jpg"
+        image: "img/booi.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "PlaYFortuna", 
         links: ["https://fortuna-promo.net/alt/playfortuna/registration?324af583ac52845bab97f6e6c9f3689c"],
         category: "fortunes",
         searchWords: ["playfortuna", "плейфортуна", "gkzajheynf", "здтуащкегуф"],
-        image: "img/playfortuna.jpg"
+        image: "img/playfortuna.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "JOZZ", 
         links: ["https://jozzpromo.info/alt/jozz/registration?0cf85df68ef6a9d4933020b0f80fdb09"],
         category: "all",
         searchWords: ["jozz", "джозз", "ljee", "вщясс"],
-                image: "img/jozz.jpg"
+                image: "img/jozz.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Stake", 
         links: ["https://stake1002.com/?c=H8RxysB8"],
         category: "all",
         searchWords: ["stake", "стейк", "cnfr", "уыеук"],
-        image: "img/stake-logo.png"
+        image: "img/stake-logo.png",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "GET X", 
         links: ["https://levelx.top/tfb6f3cd2"],
         category: "all",
         searchWords: ["getx", "гетх", "utn[", "пузч"],
-                image: "img/getx.jpg"
+                image: "img/getx.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "1xSlots", 
         links: ["https://refpa13453.top/L?tag=s_758113m_8741c_&site=758113&ad=8741"],
         category: "all",
         searchWords: ["1xslots", "1хслотс", "1[ckjn", "1чслщте"],
-                image: "img/1xslots.jpg"
+                image: "img/1xslots.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Cactus", 
         links: ["https://cactus-balances.com/affiliate/c_yt5ue3fx?promoCode=archy100&/path/wallet"],
         category: "all",
         searchWords: ["cactus", "кактус", "frcne", "рфрге"],
-                        image: "img/cactus.jpg"
+                        image: "img/cactus.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "NewRetroCasino", 
         links: ["https://linkgotoweb.com/?ref=1379"],
         category: "all",
         searchWords: ["newretro", "ньюретро", "ythnthj", "тметенщ"],
-                        image: "img/newretrocasino.jpg"
+                        image: "img/newretrocasino.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Bollywood", 
         links: ["https://digitalsmooth.top?ref=fap_w41325p129_bollywood"],
         category: "all",
         searchWords: ["bollywood", "болливуд", ",jkbddel", 'ищдшруд'],
-                        image: "img/bollywood.jpg"
+                        image: "img/bollywood.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Everum", 
         links: ["https://bit.ly/3b79fwN"],
         category: "all",
         searchWords: ["everum", "эверум", "tdthv", 'умуке'],
-                        image: "img/everum.jpg"
+                        image: "img/everum.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "FairSpin", 
         links: ["https://bonafides.club/63172/1?l=5"],
         category: "all",
         searchWords: ["fairspin", "фэрспин", "afhgcb", 'аьругш'],
-                        image: "img/fairspin.jpg"
+                        image: "img/fairspin.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "UNLIM", 
         links: ["https://unlimc.net/dcd8e66b1"],
         category: "cryptobosses",
         searchWords: ["unlim", "анлим", "eykbv", 'фтшшу'],
-        image: "img/unlim.jpg"
+        image: "img/unlim.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "cryptoboss", 
         links: ["https://cryptobossc.online/d8b310428"],
         category: "cryptobosses",
         searchWords: ["cryptoboss", "криптобосс", "chgbn,jjcc", 'ксшзщдыосс'],
-        image: "img/CryptoBoss.jpg"
+        image: "img/CryptoBoss.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "AUF КАЗИНО", 
         links: ["https://auflink.com/d33330915"],
         category: "cryptobosses",
         searchWords: ["auf", "ауф", "fde", 'фав'],
-        image: "img/AUF-Casino.jpg"
+        image: "img/AUF-Casino.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "LEEBET", 
         links: ["https://play-leebet-one.com/d9ab56d9c"],
         category: "bands",
         searchWords: ["leebet", "леебет", "kttn", 'дутун'],
-                        image: "img/leebet.jpg"
+                        image: "img/leebet.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "БАНDA", 
         links: ["https://play-banda-two.com/d6b26ec91"],
         category: "bands",
         searchWords: ["banda", "банда", "fylf", 'ирфк'],
-                        image: "img/banda.jpg"
+                        image: "img/banda.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "1GO", 
         links: ["https://1go-irrs01.com/c93369444"],
         category: "all",
         searchWords: ["1go", "1го", "1uj", '1пщ'],
-                        image: "img/1go.jpg"
+                        image: "img/1go.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "КЕНТ", 
         links: ["https://passage-through-deserts.com/d5d5d7aee"],
         category: "cats",
         searchWords: ["kent", "кент", "rty", 'нуе'],
-                        image: "img/kent.jpg"
+                        image: "img/kent.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "GAMA", 
         links: ["https://asengleink.com/dd49c4d1f"],
         category: "cats",
         searchWords: ["gama", "гама", "ufvf", 'пфпя'],
-                        image: "img/gama.jpg"
+                        image: "img/gama.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "CHAMPION SLOTS", 
         links: ["https://temon-gter.cfd/go/o70?p73525p299584p7229"],
         category: "all",
         searchWords: ["champion", "чемпион", "xvfrvby", 'чезлщт'],
-                        image: "img/championslots.jpg"
+                        image: "img/championslots.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "RAMENBET", 
         links: ["https://sul.su/z4zV"],
         category: "joys",
         searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин'],
-                        image: "img/ramenbet.jpg"
+                        image: "img/ramenbet.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "JOYCASINO", 
         links: ["https://win9.finditway.com/ru/registration?apkpop=0&partner=p34031p3300040p0692"],
         category: "joys",
         searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз'],
-                        image: "img/joy.jpg"
+                        image: "img/joy.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "Casino X", 
         links: ["https://goo.su/BGGUPr5"],
         category: "joys",
         searchWords: ["casinox", "казинокс", "fpb[yjc", 'рфшытще'],
-                        image: "img/casinox.jpg"
+                        image: "img/casinox.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "FLAGMAN", 
         links: ["https://flagman-way-six.com/cc603bd88"],
         category: "royals",
         searchWords: ["flagman", "флагман", "akfufvy", 'адфтпя'],
-                        image: "img/flagman.jpg"
+                        image: "img/flagman.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "CatCasino", 
         links: ["https://catchthecatsix.com/d348785e3"],
         category: "cats",
         searchWords: ["catcasino", "катказано", "fcnfpfyf", 'рфеасящ'],
-                        image: "img/cat.jpg"
+                        image: "img/cat.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "R7CASINO", 
         links: ["https://aristocratic-hall.com/dc49b623a"],
         category: "cats",
         searchWords: ["r7casino", "р7казино", "h7fpfbyj", 'к7рфшзыщ'],
-                        image: "img/r7.jpg"
+                        image: "img/r7.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "КОМЕТА", 
         links: ["https://stars-flight.com/s2b9c59b0"],
         category: "cats",
         searchWords: ["cometa", "комета", "rjvtnf", 'щшсукф'],
-                        image: "img/kometa.jpg"
+                        image: "img/kometa.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "LEX", 
         links: ["https://lex-irrs01.com/cbc750540"],
         category: "royals",
         searchWords: ["lex", "лекс", "kt", 'лчу'],
-                        image: "img/lex.jpg"
+                        image: "img/lex.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "GIZBO", 
         links: ["https://gzb-blrs10.com/c72564a7b"],
         category: "royals",
         searchWords: ["gizbo", "гизбо", "ubp,j", 'пшсяд'],
-                        image: "img/gizbo.jpg"
+                        image: "img/gizbo.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "MONRO", 
         links: ["https://mnr-irrs01.com/c3ef3d3bd"],
         category: "royals",
         searchWords: ["monro", "монро", "vjyhj", 'щтпкщ'],
-                        image: "img/monro.jpg"
+                        image: "img/monro.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "DRIP", 
         links: ["https://drp-irrs01.com/cca21844b"],
         category: "royals",
         searchWords: ["drip", "дрип", "lhib", 'вшшз'],
-                        image: "img/drip.jpg"
+                        image: "img/drip.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "STARDA", 
         links: ["https://strd-irrs12.com/c73b4da28"],
         category: "royals",
         searchWords: ["starda", "старda", "cnfhlf", 'уфкеак'],
-                        image: "img/starda.jpg"
+                        image: "img/starda.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "IZZI", 
         links: ["https://izzi-irrs01.com/c636b38fb"],
         category: "royals",
         searchWords: ["izzi", "иззи", "bppb", 'шсяш'],
-                        image: "img/izzi.jpg"
+                        image: "img/izzi.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "LEGZO", 
         links: ["https://gzo-irrs01.com/c8d4abf8a"],
         category: "royals",
         searchWords: ["legzo", "легзо", "ktupj", 'дупся'],
-                        image: "img/legzo.jpg"
+                        image: "img/legzo.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "SOL", 
         links: ["https://sol-diamew02.com/c984420f9"],
         category: "royals",
         searchWords: ["sol", "сол", "cjk", 'ыщд'],
-                        image: "img/sol.jpg"
+                        image: "img/sol.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "FRESH", 
         links: ["https://fresh-azhqmrpiks.com/caba447c3"],
         category: "royals",
         searchWords: ["fresh", "фреш", "aht", 'фку'],
-                        image: "img/fresh.jpg"
+                        image: "img/fresh.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "JET", 
         links: ["https://jtfr-itsokarsn.com/c1c438e06"],
         category: "all",
         searchWords: ["jet", "джет", "rtn", 'куе'],
-                        image: "img/jet.jpg"
+                        image: "img/jet.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "VOLNA", 
         links: ["https://vln-irrs01.com/c4afa0d8c"],
         category: "royals",
         searchWords: ["volna", "волна", "djkyf", 'вщдрф'],
-                        image: "img/volna.jpg"
+                        image: "img/volna.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     },
     { 
         name: "ROX", 
         links: ["https://rox-fwuocypyjf.com/ca3b282fe"],
         category: "all",
         searchWords: ["rox", "рокс", "hjc", 'кще'],
-                        image: "img/rox.jpg"
+                        image: "img/rox.jpg",
+             features: {
+            bonus: "+180% к депозиту + 90 фриспинов",
+            cashback: "8% кешбек",
+            withdrawals: "Быстрые выводы"
+        }
     }
 ];
