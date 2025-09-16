@@ -153,43 +153,29 @@ h1 {
     border-color: #2563eb;
 }
 
-.view-controls {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-.view-toggle-btn {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(45, 45, 77, 0.5);
-    color: #c0c0c0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.view-toggle-btn:hover {
-    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-    color: #fff;
-    border-color: #2563eb;
-}
-
 .casino-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin-bottom: 50px;
 }
 
-.casino-list.compact-view {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
+@media (max-width: 1200px) {
+    .casino-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .casino-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .casino-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .casino-item {
@@ -205,19 +191,10 @@ h1 {
     backdrop-filter: blur(10px);
 }
 
-.casino-list.compact-view .casino-item {
-    transform: scale(0.85);
-    transform-origin: center top;
-}
-
 .casino-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
     border-color: #ffcc00;
-}
-
-.casino-list.compact-view .casino-item:hover {
-    transform: translateY(-5px) scale(0.85);
 }
 
 .casino-banner {
@@ -235,19 +212,11 @@ h1 {
     position: relative;
 }
 
-.casino-list.compact-view .casino-banner {
-    height: 140px;
-}
-
 .casino-content {
     padding: 20px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
-
-.casino-list.compact-view .casino-content {
-    padding: 15px;
 }
 
 .casino-name {
@@ -258,21 +227,11 @@ h1 {
     font-weight: 600;
 }
 
-.casino-list.compact-view .casino-name {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-}
-
 .casino-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-}
-
-.casino-list.compact-view .casino-info {
-    gap: 8px;
-    margin-bottom: 15px;
 }
 
 .info-item {
@@ -283,11 +242,6 @@ h1 {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.casino-list.compact-view .info-item {
-    padding: 8px;
-    font-size: 0.8rem;
 }
 
 .info-item i {
@@ -305,11 +259,6 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.casino-list.compact-view .casino-promo {
-    padding: 10px;
-    margin: 12px 0;
-}
-
 .casino-promo:hover {
     background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
 }
@@ -320,19 +269,11 @@ h1 {
     margin-bottom: 5px;
 }
 
-.casino-list.compact-view .promo-label {
-    font-size: 0.7rem;
-}
-
 .promo-code-item {
     font-weight: bold;
     font-size: 1.2rem;
     color: #ffcc00;
     letter-spacing: 1px;
-}
-
-.casino-list.compact-view .promo-code-item {
-    font-size: 1rem;
 }
 
 .casino-link {
@@ -349,17 +290,11 @@ h1 {
     font-size: 0.95rem;
 }
 
-.casino-list.compact-view .casino-link {
-    padding: 10px;
-    font-size: 0.85rem;
-}
-
 .casino-link:hover {
     background: linear-gradient(135deg, #ffcc00 0%, #ff9900 100%);
     color: #000;
 }
 
-/* Бейдж ТОП */
 .top-badge {
     position: absolute;
     top: 10px;
@@ -422,7 +357,6 @@ footer {
     font-weight: 500;
 }
 
-/* Кнопка "Вверх" */
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
@@ -448,7 +382,6 @@ footer {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Стили для модального окна */
 .modal {
     display: none;
     position: fixed;
@@ -544,18 +477,6 @@ footer {
 @media (max-width: 768px) {
     .casino-list {
         grid-template-columns: 1fr;
-    }
-    
-    .casino-list.compact-view {
-        grid-template-columns: 1fr;
-    }
-    
-    .casino-list.compact-view .casino-item {
-        transform: scale(1);
-    }
-    
-    .casino-list.compact-view .casino-item:hover {
-        transform: translateY(-5px);
     }
     
     h1 {
