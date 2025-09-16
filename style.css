@@ -215,8 +215,7 @@ h1 {
 }
 
 .casino-banner {
-    width: 100%;
-    height: 160px;
+    position: relative;
     background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
     display: flex;
     align-items: center;
@@ -224,10 +223,27 @@ h1 {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
+
+.casino-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,0.1)"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    z-index: 1;
+}
+
+.casino-banner:has(> img)::before {
+    display: none;
+}
+
+
 
 .casino-content {
     padding: 20px;
@@ -527,4 +543,15 @@ footer {
         width: 45px;
         height: 45px;
     }
+}
+.disclaimer {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-size: 0.8rem;
+    color: #8a8a8a;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
