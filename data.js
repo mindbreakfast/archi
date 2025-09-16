@@ -111,9 +111,9 @@ const casinos = [
         searchWords: ["jozz", "джозз", "ljee", "вщясс"],
                 image: "img/jozz.jpg",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 100%",
+            cashback: "Еженедельный кэшбек",
+            withdrawals: "Турниры, Акции, Подарки"
         }
     },
     { 
@@ -219,9 +219,9 @@ const casinos = [
         searchWords: ["unlim", "анлим", "eykbv", 'фтшшу'],
         image: "img/unlim.jpg",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 250%",
+            cashback: "Фриспины в пакете новичка",
+            withdrawals: "Круглосуточная поддержка"
         }
     },
     { 
@@ -231,9 +231,9 @@ const casinos = [
         searchWords: ["cryptoboss", "криптобосс", "chgbn,jjcc", 'ксшзщдыосс'],
         image: "img/CryptoBoss.jpg",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 300%",
+            cashback: "Ежемесячный кэшбек",
+            withdrawals: "80 fs на депозит"
         }
     },
     { 
@@ -243,9 +243,9 @@ const casinos = [
         searchWords: ["auf", "ауф", "fde", 'фав'],
         image: "img/AUF-Casino.jpg",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 350%",
+            cashback: "Ежемесячный кэшбек",
+            withdrawals: "Турниры, Акции, Подарки"
         }
     },
     { 
