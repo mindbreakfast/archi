@@ -72,7 +72,7 @@ const casinos = [
                 image: "img/jozz.jpg"
     },
     { 
-        name: "Stake ТОЛЬКО КРИПТА", 
+        name: "Stake", 
         links: ["https://stake1002.com/?c=H8RxysB8"],
         category: "all",
         searchWords: ["stake", "стейк", "cnfr", "уыеук"],
