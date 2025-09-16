@@ -40,8 +40,8 @@ function renderCasinos(casinosToRender) {
         casinoInfo.className = 'casino-info';
         
         const infoItems = [
-            {icon: 'fas fa-coins', text: '+150% к депозиту и 200 спинов'},
-            {icon: 'fas fa-percentage', text: '3% кешбек'},
+            {icon: 'fas fa-coins', text: '+% к депозиту и спины'},
+            {icon: 'fas fa-percentage', text: 'Кешбек'},
             {icon: 'fas fa-bolt', text: 'Мгновенные выводы'}
         ];
         
