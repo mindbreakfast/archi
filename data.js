@@ -159,43 +159,50 @@ const casinos = [
         name: "БАНDA", 
         links: ["https://play-banda-two.com/d6b26ec91"],
         category: "bands",
-        searchWords: ["banda", "банда", "fylf", 'ирфк']
+        searchWords: ["banda", "банда", "fylf", 'ирфк'],
+                        image: "img/banda.jpg"
     },
     { 
         name: "1GO", 
         links: ["https://1go-irrs01.com/c93369444"],
         category: "all",
-        searchWords: ["1go", "1го", "1uj", '1пщ']
+        searchWords: ["1go", "1го", "1uj", '1пщ'],
+                        image: "img/1go.jpg"
     },
     { 
         name: "КЕНТ", 
         links: ["https://passage-through-deserts.com/d5d5d7aee"],
         category: "cats",
-        searchWords: ["kent", "кент", "rty", 'нуе']
+        searchWords: ["kent", "кент", "rty", 'нуе'],
+                        image: "img/kent.jpg"
     },
     { 
         name: "GAMA", 
         links: ["https://asengleink.com/dd49c4d1f"],
         category: "cats",
-        searchWords: ["gama", "гама", "ufvf", 'пфпя']
+        searchWords: ["gama", "гама", "ufvf", 'пфпя'],
+                        image: "img/gama.jpg"
     },
     { 
         name: "CHAMPION SLOTS", 
         links: ["https://temon-gter.cfd/go/o70?p73525p299584p7229"],
         category: "all",
-        searchWords: ["champion", "чемпион", "xvfrvby", 'чезлщт']
+        searchWords: ["champion", "чемпион", "xvfrvby", 'чезлщт'],
+                        image: "img/championslots.jpg"
     },
     { 
         name: "RAMENBET", 
         links: ["https://sul.su/z4zV"],
         category: "joys",
-        searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин']
+        searchWords: ["ramenbet", "раменбет", "hfvy,tn", 'кашуин'],
+                        image: "img/ramenbet.jpg"
     },
     { 
         name: "JOYCASINO", 
         links: ["https://win9.finditway.com/ru/registration?apkpop=0&partner=p34031p3300040p0692"],
         category: "joys",
-        searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз']
+        searchWords: ["joycasino", "джойказино", "ljiqrfpb", 'вщшсфтшз'],
+                        image: "img/joy.jpg"
     },
     { 
         name: "Casino X", 
@@ -208,96 +215,112 @@ const casinos = [
         name: "FLAGMAN", 
         links: ["https://flagman-way-six.com/cc603bd88"],
         category: "royals",
-        searchWords: ["flagman", "флагман", "akfufvy", 'адфтпя']
+        searchWords: ["flagman", "флагман", "akfufvy", 'адфтпя'],
+                        image: "img/flagman.jpg"
     },
     { 
         name: "CatCasino", 
         links: ["https://catchthecatsix.com/d348785e3"],
         category: "cats",
-        searchWords: ["catcasino", "катказано", "fcnfpfyf", 'рфеасящ']
+        searchWords: ["catcasino", "катказано", "fcnfpfyf", 'рфеасящ'],
+                        image: "img/cat.jpg"
     },
     { 
         name: "R7CASINO", 
         links: ["https://aristocratic-hall.com/dc49b623a"],
         category: "cats",
-        searchWords: ["r7casino", "р7казино", "h7fpfbyj", 'к7рфшзыщ']
+        searchWords: ["r7casino", "р7казино", "h7fpfbyj", 'к7рфшзыщ'],
+                        image: "img/r7.jpg"
     },
     { 
         name: "КОМЕТА", 
         links: ["https://stars-flight.com/s2b9c59b0"],
         category: "cats",
-        searchWords: ["cometa", "комета", "rjvtnf", 'щшсукф']
+        searchWords: ["cometa", "комета", "rjvtnf", 'щшсукф'],
+                        image: "img/kometa.jpg"
     },
     { 
         name: "LEX", 
         links: ["https://lex-irrs01.com/cbc750540"],
         category: "royals",
-        searchWords: ["lex", "лекс", "kt", 'лчу']
+        searchWords: ["lex", "лекс", "kt", 'лчу'],
+                        image: "img/lex.jpg"
     },
     { 
         name: "GIZBO", 
         links: ["https://gzb-blrs10.com/c72564a7b"],
         category: "royals",
-        searchWords: ["gizbo", "гизбо", "ubp,j", 'пшсяд']
+        searchWords: ["gizbo", "гизбо", "ubp,j", 'пшсяд'],
+                        image: "img/gizbo.jpg"
     },
     { 
         name: "MONRO", 
         links: ["https://mnr-irrs01.com/c3ef3d3bd"],
         category: "royals",
-        searchWords: ["monro", "монро", "vjyhj", 'щтпкщ']
+        searchWords: ["monro", "монро", "vjyhj", 'щтпкщ'],
+                        image: "img/monro.jpg"
     },
     { 
         name: "DRIP", 
         links: ["https://drp-irrs01.com/cca21844b"],
         category: "royals",
-        searchWords: ["drip", "дрип", "lhib", 'вшшз']
+        searchWords: ["drip", "дрип", "lhib", 'вшшз'],
+                        image: "img/drip.jpg"
     },
     { 
         name: "STARDA", 
         links: ["https://strd-irrs12.com/c73b4da28"],
         category: "royals",
-        searchWords: ["starda", "старda", "cnfhlf", 'уфкеак']
+        searchWords: ["starda", "старda", "cnfhlf", 'уфкеак'],
+                        image: "img/starda.jpg"
     },
     { 
         name: "IZZI", 
         links: ["https://izzi-irrs01.com/c636b38fb"],
         category: "royals",
-        searchWords: ["izzi", "иззи", "bppb", 'шсяш']
+        searchWords: ["izzi", "иззи", "bppb", 'шсяш'],
+                        image: "img/izzi.jpg"
     },
     { 
         name: "LEGZO", 
         links: ["https://gzo-irrs01.com/c8d4abf8a"],
         category: "royals",
-        searchWords: ["legzo", "легзо", "ktupj", 'дупся']
+        searchWords: ["legzo", "легзо", "ktupj", 'дупся'],
+                        image: "img/legzo.jpg"
     },
     { 
         name: "SOL", 
         links: ["https://sol-diamew02.com/c984420f9"],
         category: "royals",
-        searchWords: ["sol", "сол", "cjk", 'ыщд']
+        searchWords: ["sol", "сол", "cjk", 'ыщд'],
+                        image: "img/sol.jpg"
     },
     { 
         name: "FRESH", 
         links: ["https://fresh-azhqmrpiks.com/caba447c3"],
         category: "royals",
-        searchWords: ["fresh", "фреш", "aht", 'фку']
+        searchWords: ["fresh", "фреш", "aht", 'фку'],
+                        image: "img/fresh.jpg"
     },
     { 
         name: "JET", 
         links: ["https://jtfr-itsokarsn.com/c1c438e06"],
         category: "all",
-        searchWords: ["jet", "джет", "rtn", 'куе']
+        searchWords: ["jet", "джет", "rtn", 'куе'],
+                        image: "img/jet.jpg"
     },
     { 
         name: "VOLNA", 
         links: ["https://vln-irrs01.com/c4afa0d8c"],
         category: "royals",
-        searchWords: ["volna", "волна", "djkyf", 'вщдрф']
+        searchWords: ["volna", "волна", "djkyf", 'вщдрф'],
+                        image: "img/volna.jpg"
     },
     { 
         name: "ROX", 
         links: ["https://rox-fwuocypyjf.com/ca3b282fe"],
         category: "all",
-        searchWords: ["rox", "рокс", "hjc", 'кще']
+        searchWords: ["rox", "рокс", "hjc", 'кще'],
+                        image: "img/rox.jpg"
     }
 ];
