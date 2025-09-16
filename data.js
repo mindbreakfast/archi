@@ -9,9 +9,9 @@ const casinos = [
         image: "img/vavada.jpg",
         isTop: true,
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 150%",
+            cashback: "Ежемесячный кэшбек",
+            withdrawals: "Без верификации"
         }
     },
     { 
@@ -22,9 +22,9 @@ const casinos = [
         image: "img/vodka.jpg",
         isTop: true,
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 125%",
+            cashback: "до 300 FS без вагера",
+            withdrawals: "Без верификации"
         }
     },
     { 
@@ -61,9 +61,9 @@ const casinos = [
                 image: "img/winity.jpg",
         isTop: true,
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 225%",
+            cashback: "Лояльность по уровням, подарки",
+            withdrawals: "Кэшбек раз в неделю, Турниры"
         }
     },
     
@@ -87,9 +87,9 @@ const casinos = [
         searchWords: ["booi", "боои", ",jji", "ищщш", "буй"],
         image: "img/booi.jpg",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный бонус 200%",
+            cashback: "Лояльность по уровням",
+            withdrawals: "Акции, Подарки и бонусы"
         }
     },
     { 
@@ -99,9 +99,9 @@ const casinos = [
         searchWords: ["playfortuna", "плейфортуна", "gkzajheynf", "здтуащкегуф"],
         image: "img/playfortuna.jpg",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Приветственный пакет 250%",
+            cashback: "Еженедельный кэшбек",
+            withdrawals: "50 fs в игре Legacy of Egypt"
         }
     },
     { 
@@ -123,9 +123,9 @@ const casinos = [
         searchWords: ["stake", "стейк", "cnfr", "уыеук"],
         image: "img/stake-logo.png",
              features: {
-            bonus: "+180% к депозиту + 90 фриспинов",
-            cashback: "8% кешбек",
-            withdrawals: "Быстрые выводы"
+            bonus: "Турниры, Акции, Подарки",
+            cashback: "Кэшбек, Колесо фортуны",
+            withdrawals: "Только крипта"
         }
     },
     { 
