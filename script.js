@@ -1,16 +1,21 @@
+// Переменная для отслеживания текущего режима отображения
+let isCompactView = false;
+
 // Функция для отображения казино
 function renderCasinos(casinosToRender) {
     const casinoList = document.getElementById('casino-list');
     casinoList.innerHTML = '';
     
+    // Применяем класс компактного вида если нужно
+    if (isCompactView) {
+        casinoList.classList.add('compact-view');
+    } else {
+        casinoList.classList.remove('compact-view');
+    }
+    
     casinosToRender.forEach(casino => {
         const casinoItem = document.createElement('div');
         casinoItem.className = 'casino-item';
-        
-        // Добавляем класс для ТОП казино
-        if (casino.isTop) {
-            casinoItem.classList.add('top-casino');
-        }
         
         // Баннер казино
         const casinoBanner = document.createElement('div');
@@ -23,20 +28,14 @@ function renderCasinos(casinosToRender) {
             casinoBanner.innerHTML = `<div>${casino.name}</div>`;
         }
         
-        // Добавляем класс для ТОП баннера
-        if (casino.isTop) {
-            casinoBanner.classList.add('top-banner');
-        }
-        
-        // Бейдж ТОП для казино из этой категории
+        // Добавляем бейдж ТОП для казино из этой категории
         if (casino.isTop) {
             const topBadge = document.createElement('div');
             topBadge.className = 'top-badge';
-            topBadge.textContent = 'ТОП';
+            topBadge.innerHTML = '<i class="fas fa-fire"></i> ТОП';
             casinoBanner.appendChild(topBadge);
         }
         
-        // Остальной код остается без изменений...
         // Контент казино
         const casinoContent = document.createElement('div');
         casinoContent.className = 'casino-content';
@@ -149,6 +148,31 @@ function closeModal() {
     document.getElementById('instruction-modal').style.display = 'none';
 }
 
+// Функция для переключения вида
+function toggleView() {
+    isCompactView = !isCompactView;
+    const toggleBtn = document.getElementById('view-toggle');
+    
+    if (isCompactView) {
+        toggleBtn.innerHTML = '<i class="fas fa-th"></i>';
+        toggleBtn.title = 'Переключить на 3 колонки';
+    } else {
+        toggleBtn.innerHTML = '<i class="fas fa-th-large"></i>';
+        toggleBtn.title = 'Переключить на 4 колонки';
+    }
+    
+    // Перерисовываем казино с новыми настройками
+    filterCasinos();
+}
+
+// Функция для прокрутки вверх
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 // Инициализация
 document.addEventListener('DOMContentLoaded', function() {
     // Первоначальная отрисовка всех казино
@@ -174,6 +198,22 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', function(event) {
         if (event.target == document.getElementById('instruction-modal')) {
             closeModal();
+        }
+    });
+    
+    // Обработчик для переключения вида
+    document.getElementById('view-toggle').addEventListener('click', toggleView);
+    
+    // Обработчик для кнопки "Вверх"
+    document.getElementById('scroll-to-top').addEventListener('click', scrollToTop);
+    
+    // Показываем/скрываем кнопку "Вверх" при прокрутке
+    window.addEventListener('scroll', function() {
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.style.display = 'flex';
+        } else {
+            scrollToTopBtn.style.display = 'none';
         }
     });
 });
