@@ -233,5 +233,65 @@ function checkImageLoading() {
     });
 }
 
+// Функция для анимации соц-кнопок
+function animateSocialButtons() {
+    const socialLinks = document.querySelectorAll('.social-links a');
+    let index = 0;
+    
+    // Запускаем интервал каждые 10 секунд
+    setInterval(() => {
+        // Сбрасываем предыдущую анимацию
+        socialLinks.forEach(link => {
+            link.classList.remove('social-wave', 'social-pulse');
+        });
+        
+        // Анимация волны по очереди
+        if (socialLinks[index]) {
+            socialLinks[index].classList.add('social-wave');
+        }
+        
+        // Переходим к следующей кнопке
+        index = (index + 1) % socialLinks.length;
+        
+    }, 10000); // 10 секунд
+    
+    // Дополнительная анимация - все кнопки одновременно раз в 30 секунд
+    setInterval(() => {
+        socialLinks.forEach(link => {
+            link.classList.add('social-pulse');
+            setTimeout(() => {
+                link.classList.remove('social-pulse');
+            }, 3000);
+        });
+    }, 30000);
+}
+
+// Альтернатива - случайная анимация
+function randomSocialAnimation() {
+    const socialLinks = document.querySelectorAll('.social-links a');
+    const animations = ['social-wave', 'social-pulse'];
+    
+    setInterval(() => {
+        // Сбрасываем все анимации
+        socialLinks.forEach(link => {
+            link.classList.remove('social-wave', 'social-pulse');
+        });
+        
+        // Случайная кнопка и случайная анимация
+        const randomLink = socialLinks[Math.floor(Math.random() * socialLinks.length)];
+        const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+        
+        randomLink.classList.add(randomAnimation);
+        
+        // Убираем анимацию через 2 секунды
+        setTimeout(() => {
+            randomLink.classList.remove(randomAnimation);
+        }, 2000);
+        
+    }, 10000);
+}
+
+
+
 // Вызвать после загрузки страницы
 window.addEventListener('load', checkImageLoading);
