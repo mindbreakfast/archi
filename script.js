@@ -212,3 +212,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// улучшение заглушки
+function checkImageLoading() {
+    document.querySelectorAll('.casino-banner').forEach(banner => {
+        if (banner.style.backgroundImage && banner.style.backgroundImage !== 'none') {
+            const img = new Image();
+            img.src = banner.style.backgroundImage.replace('url("', '').replace('")', '');
+            img.onload = function() {
+                banner.style.backgroundSize = 'cover';
+                banner.style.backgroundPosition = 'center';
+                banner.querySelector('div')?.remove();
+            };
+            img.onerror = function() {
+                // Если картинка не загрузилась, оставляем заглушку
+                banner.style.backgroundImage = 'none';
+            };
+        }
+    });
+}
+
+// Вызвать после загрузки страницы
+window.addEventListener('load', checkImageLoading);
