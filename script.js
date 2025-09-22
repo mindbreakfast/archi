@@ -138,6 +138,31 @@ function closeModal() {
     document.getElementById('instruction-modal').style.display = 'none';
 }
 
+
+
+// Функции для модального окна WhiteBird
+function openWhiteBirdModal() {
+    document.getElementById('whitebird-modal').style.display = 'block';
+}
+
+function closeWhiteBirdModal() {
+    document.getElementById('whitebird-modal').style.display = 'none';
+}
+
+// В инициализации добавить обработчики:
+document.getElementById('whitebird-btn').addEventListener('click', openWhiteBirdModal);
+document.querySelector('.whitebird-close').addEventListener('click', closeWhiteBirdModal);
+
+// Закрытие модального окна WhiteBird при клике вне его
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('whitebird-modal')) {
+        closeWhiteBirdModal();
+    }
+});
+
+
+
+
 // Функция для прокрутки вверх
 function scrollToTop() {
     window.scrollTo({
